@@ -6,7 +6,7 @@ import Preview from './assets/Components/Preview';
 import { SignedIn, SignedOut, SignInButton, UserButton, useAuth } from '@clerk/clerk-react';
 import { ResumeProvider } from '/src/context/ResumeContext';
 import { toast, Toaster } from 'react-hot-toast';
-import AboutUs from './assets/Components/Aboutus';
+import AboutUs from '/src/assets/Components/AboutUS.jsx';
 import Feature from './assets/Components/Feature';
 // ProtectedRoute component to wrap around authenticated routes
 function ProtectedRoute({ children }) {
