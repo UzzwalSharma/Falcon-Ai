@@ -8,10 +8,10 @@ const Feature = () => {
   const [selectedPiece, setSelectedPiece] = useState(null);
 
   const pieces = [
-    { id: 1, x: -120, y: -120, text: 'Feature 1', content: 'Details about Feature 1' },
-    { id: 2, x: 120, y: -120, text: 'Feature 2', content: 'Details about Feature 2' },
-    { id: 3, x: -120, y: 120, text: 'Feature 3', content: 'Details about Feature 3' },
-    { id: 4, x: 120, y: 120, text: 'Feature 4', content: 'Details about Feature 4' },
+    { id: 1, x: -120, y: -120, text: 'Feature 1', content: 'Auto Content Generation' },
+    { id: 2, x: 120, y: -120, text: 'Feature 2', content: 'Enhancement button' },
+    { id: 3, x: -120, y: 120, text: 'Feature 3', content: 'various available resume color themes along with print and dowlnoad functionality' },
+    { id: 4, x: 120, y: 120, text: 'Feature 4', content: 'Interview questions based onn the user resume' },
   ];
 
   const openPieceCard = (piece) => {

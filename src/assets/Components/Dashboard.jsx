@@ -337,6 +337,15 @@ const Dashboard = () => {
 
 
 
+      <footer style={{
+        padding: '10px',
+        textAlign: 'center',
+        backgroundColor: '#f0f0f0',
+        color: '#333',
+        fontSize: '14px'
+      }}>
+        Made with <span style={{ color: 'red' }}>❤️</span> by Ujjwal
+      </footer>
       </div>
         {/* Snackbar Component */}
         <Snackbar 

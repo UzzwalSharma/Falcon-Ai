@@ -13,7 +13,6 @@ const InterviewQuestionsButton = () => {
     setQuestions(''); // Clear previous questions
     
     try {
-      // Extract fields from formData with safe fallback values
       const {
         name = "Candidate",
         experience = [],
@@ -29,16 +28,13 @@ const InterviewQuestionsButton = () => {
         Projects: ${projects.map(project => project.title).join(', ') || "No projects listed"}
       `;
 
-      // Call chatSession (assuming it has a similar API to generateText)
       const result = await chatSession.sendMessage(prompt);
-      
-      // Assume the response format is { text: "generated questions..." }
       setQuestions(result.response?.text || 'No questions generated.');
       
     } catch (error) {
       console.error('Error generating interview questions:', error);
     } finally {
-      setLoading(false); // Stop loading state
+      setLoading(false);
     }
   };
 
@@ -48,22 +44,31 @@ const InterviewQuestionsButton = () => {
         variant="contained"
         onClick={handleGenerateQuestions}
         disabled={loading}
-        style={{ marginBottom: '20px' }}
+        style={{
+          backgroundColor: '#6a0dad',
+          color: 'white',
+          padding: '10px 20px',
+          fontSize: '16px',
+          fontWeight: 'bold',
+          marginBottom: '20px',
+          transition: '0.3s',
+        }}
       >
-        {loading ? <CircularProgress size={24} /> : 'Generate Interview Questions'}
+        {loading ? <CircularProgress size={24} style={{ color: 'white' }} /> : 'Generate Interview Questions'}
       </Button>
       {questions && (
         <Card 
           style={{ 
-            maxWidth: '600px', 
+            maxWidth: '700px', 
             margin: '0 auto', 
-            backgroundColor: '#f5f5f5', 
-            padding: '15px', 
-            borderRadius: '8px' 
+            backgroundColor: '#f8f8ff', 
+            padding: '20px', 
+            borderRadius: '10px',
+            boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)'
           }}
         >
           <CardContent>
-            <Typography variant="h5" gutterBottom style={{ color: '#3f51b5' }}>
+            <Typography variant="h5" gutterBottom style={{ color: '#6a0dad', fontWeight: 'bold' }}>
               Generated Interview Questions
             </Typography>
             {questions.split('\n').map((question, index) => (
@@ -72,9 +77,10 @@ const InterviewQuestionsButton = () => {
                 variant="body1" 
                 style={{ 
                   marginBottom: '10px', 
-                  padding: '10px', 
-                  backgroundColor: '#e0e7ff', 
-                  borderRadius: '5px' 
+                  padding: '12px', 
+                  backgroundColor: '#e6e0f8', 
+                  borderRadius: '6px',
+                  color: '#333'
                 }}
               >
                 {index + 1}. {question}
