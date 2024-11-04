@@ -1,0 +1,153 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Use a clean, modern font */
+}
+
+/* Light Mode */
+body.light-mode {
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark text */
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #333333; /* Dark background */
+    color: #ffffff; /* Light text */
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #ffffff; /* White background for navbar */
+    color: #333333; /* Dark text for navbar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      z-index: 100;
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 28px; /* Slightly larger font size */
+    font-weight: 700; /* Bold logo */
+    color: #6a1b9a; /* Purple color for the logo */
+    letter-spacing: 1px; /* Slight letter spacing for a refined look */
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    margin-left: 50px; /* Spacing between logo and links */
+}
+
+.nav-link {
+    margin: 0 20px; /* Space between links */
+    color: #333333; /* Dark link color */
+    text-decoration: none;
+    font-size: 16px; /* Base font size */
+    font-weight: 500; /* Medium weight for improved readability */
+    letter-spacing: 0.5px; /* Slight letter spacing for clarity */
+    padding: 8px 12px; /* Added padding for clickability */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for links */
+.nav-link:hover {
+    background-color: rgba(106, 27, 154, 0.1); /* Light purple background on hover */
+    color: #6a1b9a; /* Purple text on hover */
+}
+
+/* Active link styling */
+.nav-link.active {
+    color: #6a1b9a; /* Purple color for active link */
+    font-weight: bold; /* Bold for active link */
+}
+
+/* Action buttons */
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+/* Specific button styling for "Get Started!" */
+.actions .joy-button {
+    background-color: #6a1b9a; /* Purple for primary button */
+    color: #ffffff; /* White text for primary button */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for primary button */
+.actions .joy-button:hover {
+    background-color: rgba(106, 27, 154, 0.8); /* Slightly darker on hover */
+}
+
+/* Icon button adjustments */
+.icons {
+    margin-left: 20px; /* Spacing between buttons */
+}
+
+/* Hamburger icon */
+.hamburger-icon {
+    display: none; /* Hide by default */
+}
+
+/* Responsive styles for mobile navigation */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide nav links by default on small screens */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 70px; /* Adjusted position for dropdown below the navbar */
+        left: 0;
+        right: 0;
+        background-color: #ffffff; /* White background for the dropdown */
+        z-index: 1; /* Bring dropdown above other elements */
+        border-radius: 8px; /* Rounded corners */
+        transition: max-height 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+        overflow: hidden; /* Hide overflow for transition */
+        max-height: 0; /* Initially collapse height */
+        opacity: 0; /* Initially hidden */
+    }
+
+    .nav-links.open {
+        display: flex; /* Show when nav is open */
+        max-height: 300px; /* Set a max height for transition */
+        opacity: 1; /* Fade in */
+    }
+
+    /* Individual nav link styles */
+    .nav-link {
+        padding: 15px 20px; /* Increased padding for better touch targets */
+        color: #333; /* Text color */
+        text-decoration: none;
+        text-align: left; /* Align text to the left */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+        font-size: 18px; /* Slightly larger font for better readability */
+        font-weight: 500; /* Medium weight for improved readability */
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Subtle separator between links */
+    }
+
+    .nav-link:hover {
+        background-color: rgba(106, 27, 154, 0.1); /* Light hover background */
+        color: #6a1b9a; /* Change text color on hover */
+    }
+
+    .nav-link:last-child {
+        border-bottom: none; /* Remove border from the last link */
+    }
+
+    /* Hamburger icon styles */
+    .hamburger-icon {
+        display: block; /* Show hamburger icon on small screens */
+        color: #6a1b9a; /* Color of the hamburger icon */
+        transition: transform 0.3s ease; /* Smooth transition for icon */
+        font-size: 24px; /* Increase size for better visibility */
+    }
+
+    .hamburger-icon:hover {
+        transform: scale(1.1); /* Slightly scale on hover for effect */
+    }
+}

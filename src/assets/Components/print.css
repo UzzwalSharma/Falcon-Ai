@@ -1,0 +1,71 @@
+@media print {
+    .hide-print {
+      display: none !important; /* Force hide the button when printing */
+    }
+  }
+  /* Main container layout */
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.form-container {
+  flex: 1;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+}
+
+.color-picker-button {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.resume-preview {
+  flex: 1;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .form-container,
+  .resume-preview {
+    width: 100%;
+  }
+
+  .color-picker-button {
+    flex-direction: column;
+  }
+}
+
+/* Small screen adjustments */
+@media (max-width: 600px) {
+  .color-picker-button {
+    flex-direction: column;
+  }
+
+  h2, p {
+    font-size: 1rem;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .color-picker {
+    width: 100%;
+  }
+}
