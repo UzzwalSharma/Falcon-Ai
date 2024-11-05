@@ -21,7 +21,7 @@ const AboutUs = () => {
             <Box display="flex" justifyContent="center" mt={-6}>
               <Avatar
                 alt="Ujjwal's photo"
-                src="public/ujju.png"
+                src="/WhatsApp Image 2024-07-18 at 10.12.39_30e74f22.jpg"
                 sx={{ width: 120, height: 120, border: '3px solid white' }}
               />
             </Box>
@@ -47,13 +47,13 @@ const AboutUs = () => {
             <Box display="flex" justifyContent="center" mt={-6}>
               <Avatar
                 alt="Rinni's photo"
-                src="/rinny.png"
+                src="/WhatsApp Image 2024-11-05 at 22.11.06_2dd43961.jpg"
                 sx={{ width: 120, height: 120, border: '3px solid white' }}
               />
             </Box>
             <CardContent>
               <Typography variant="h5" textAlign="center" fontWeight="600" gutterBottom>
-                Rinny
+                Rimmy
               </Typography>
               <Typography variant="body1" color="text.secondary" textAlign="center">
                 Data Scientist | Functional Strategist | Skilled in Data Analysis & UI/UX
